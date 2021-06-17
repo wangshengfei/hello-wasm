@@ -8,6 +8,7 @@ extern {
 }
 
 #[wasm_bindgen]
-pub fn greet(name: &str) {
+pub fn greet(name: &str) -> String {
     alert(&format!("Hello, {}!", name));
+    name.to_owned() + "xxx"
 }
